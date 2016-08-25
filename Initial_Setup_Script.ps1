@@ -1,5 +1,5 @@
 ###This script does a number of things under the initial local account we create
-###First, it sets the script execution policy so that it can do the rest of it's work
+###First, it sets the script execution policy so that it can do the rest of its work
 ###Second, it configures the Windows Firewall to allow ping to and from the machine, IPv4 and IPv6
 ###Third, it removes as much of the Dell/Intel crapware as possible. (There's a few things that have to 
 ###be done manually, but it's like two things after this script is done
@@ -8,6 +8,7 @@
 
 
 ##set script execution policy
+##note that this really has to be done as a standalone command, but I put it here because typing sucks.
 
 Set-ExecutionPolicy RemoteSigned
 
@@ -60,7 +61,7 @@ $app.Uninstall()
 
 $app = Get-WmiObject -Class Win32_Product -Filter "Name = 'Intel(R) Management Engine Components'"
 $app.Uninstall()
-$app = Get-WmiObject -Class Win32_Product -Filter "Name = 'Intel® Security Assist'"
+$app = Get-WmiObject -Class Win32_Product -Filter "Name = 'IntelÂ® Security Assist'"
 $app.Uninstall()
 
 ##set desktop power management
