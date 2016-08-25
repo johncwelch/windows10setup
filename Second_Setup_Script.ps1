@@ -22,7 +22,7 @@ $localgroup =[ADSI]"WinNT://$computername/Administrators,group"
 #get path to DesktopAdmins group
 $adgroup =[ADSI]"WinNT://domain.com/DesktopAdmins,group"
 
-#add NWRDekstop to admin
+#add DesktopAdmins to admin
 $localGroup.PSBase.Invoke("Add",$adgroup.PSBase.Path)
 
 ##Add Primary user to local remote users group
