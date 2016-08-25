@@ -19,7 +19,7 @@ $computername = (Get-WmiObject Win32_Computersystem).name
 #get path to loacl admin group
 $localgroup =[ADSI]"WinNT://$computername/Administrators,group"
 
-#get path to NWRDesktop group
+#get path to DesktopAdmins group
 $adgroup =[ADSI]"WinNT://domain.com/DesktopAdmins,group"
 
 #add NWRDekstop to admin
