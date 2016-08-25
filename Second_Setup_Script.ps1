@@ -6,6 +6,7 @@
 ###third, it enables remote desktop
 
 ##set script execution policy
+##note that this really has to be done as a standalone command, but I put it here because typing sucks.
 
 Set-ExecutionPolicy RemoteSigned 
 
